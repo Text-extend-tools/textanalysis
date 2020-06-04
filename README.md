@@ -4,7 +4,7 @@
 
 These programs all involve reading, handling, and manipulating strings.
 
-### *bigrams*
+## *bigrams*
 Takes in a .txt file (in our case, Jane Austen's *Pride and Prejudice*) and generates a dictionary of all the bigrams (two-word combinations) in the text and their number of occurrences.
 - Dynamic memory allocation and Fx Hash (32-bit) is used to create the hash table
 - When more than half of the table is filled, the table doubles in size in order to avoid excess collisions, then prints the collisions for the previous and newly expanded tables for comparison
@@ -12,7 +12,7 @@ Takes in a .txt file (in our case, Jane Austen's *Pride and Prejudice*) and gene
 
 <img src="media/bigrams.png" width="640">
 
-### *cryptogram*
+## *cryptogram*
 Acts as a coding/decoding program that takes a password and scrambles (or unscrambles) a string of characters.
 - Three inputs:
   - "encrypt" or "decrypt" command
@@ -24,7 +24,7 @@ Acts as a coding/decoding program that takes a password and scrambles (or unscra
 
 <img src="media/cryptogram.png" width="640">
 
-### *spellcheck*
+## *spellcheck*
 Uses a ternary search tree to list out suggested spelling corrections given an input word. Accounts for insertion, deletion, replacement, and transposition errors.
 
 <img src="media/spellcheck.png" width="640">
