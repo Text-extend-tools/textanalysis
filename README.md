@@ -5,7 +5,7 @@
 These programs all involve reading, handling, and manipulating strings.
 
 ## *bigrams*
-Takes in a ``book.txt`` (in our case, Jane Austen's *Pride and Prejudice*) and generates a dictionary of all the bigrams (two-word combinations) in the text and their number of occurrences.
+Takes in ``book.txt`` (in our case, Jane Austen's *Pride and Prejudice*) and generates a dictionary of all the bigrams (two-word combinations) in the text and their number of occurrences.
 - Dynamic memory allocation and Fx Hash (32-bit) is used to create the hash table
 - When more than half of the table is filled, the table doubles in size in order to avoid excess collisions, then prints the collisions for the previous and newly expanded tables for comparison
 - Upon completing, the program prints all bigrams with at least 200 occurrences. If none reach 200, it prints all bigrams. Lastly, it print out the total number of bigrams
