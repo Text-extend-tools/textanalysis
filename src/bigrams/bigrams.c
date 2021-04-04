@@ -3,7 +3,8 @@
 #include <ctype.h>
 #include "hashtable.h"
 
-bool read_word(FILE *f, char *wordBuffer) {
+bool read_word(FILE *f, char *wordBuffer)
+{
     char current;
     // searching for first letter in word
     while (fscanf(f, "%c", &current)) {
@@ -32,9 +33,15 @@ bool read_word(FILE *f, char *wordBuffer) {
     return true;
 }
 
-int main(void) {
+int main(int argc, char *argv[])
+{
+    if (argc < 2)
+	{
+		fprintf(stderr,"Usage: %s <File>\n", argv[0]);
+		exit(EXIT_FAILURE);
+	}
     hashtable_t *ht = hashtable_create();
-    FILE *f = fopen("book.txt", "r");
+    FILE *f = fopen(argv[1], "r");
     char *word1 = malloc(256);
     read_word(f, word1);
     char *word2 = malloc(256);

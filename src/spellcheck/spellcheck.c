@@ -128,13 +128,13 @@ void tst_search(tst_t *tst, char *word) {
 }
 
 int main(int argc, char **argv) {
-    if (argc < 2) {
-        fprintf(stderr, "usage: %s <word>+\n", argv[0]);
+    if (argc < 3) {
+        fprintf(stderr, "usage: %s <dict.txt> <word>+\n", argv[0]);
         return 1;
     }
-    FILE *f = fopen("words.txt", "r");
+    FILE *f = fopen(argv[1], "r");
     if (!f) {
-        perror("Failed to open words.txt");
+        perror("Failed to open <dict>.txt");
         return 1;
     }
     tst_t *tst = tst_create();
@@ -147,7 +147,7 @@ int main(int argc, char **argv) {
         tst_add(tst, strBuffer);
     }
     fclose(f);
-    for (int i = 1; i < argc; i++) {
+    for (int i = 2; i < argc; i++) {
         if (strlen(argv[i]) >= WORD_MAX_LEN) {
             fprintf(stderr, "word '%s' is too long!\n", argv[i]);
             continue;
